@@ -1,0 +1,921 @@
+<!-- <div style="display: flex">
+	<div style="font-size: 30px;color: black;">
+		<ng2-odometer [number]="test" [config]="{}"></ng2-odometer>
+	</div>
+	----
+	<div style="font-size: 30px;color: black;"> okk done ? yeah
+		<ng2-odometer [number]="test1" [config]="{}"></ng2-odometer>
+	</div>
+	----
+	<div style="font-size: 30px;color: black;">
+		<ng2-odometer [number]="test" [config]="{}"></ng2-odometer>
+	</div>
+</div> -->
+
+
+<!-- <style>
+  @-webkit-keyframes argh-my-eyes {
+    0%   { background-color: #fff; }
+    49% { background-color: #fff; }
+    50% { background-color: #000; }
+    99% { background-color: #000; }
+    100% { background-color: #fff; }
+  }
+  @-moz-keyframes argh-my-eyes {
+    0%   { background-color: #fff; }
+    49% { background-color: #fff; }
+    50% { background-color: #000; }
+    99% { background-color: #000; }
+    100% { background-color: #fff; }
+  }
+  @keyframes argh-my-eyes {
+    0%   { background-color: #fff; }
+    49% { background-color: #fff; }
+    50% { background-color: #000; }
+    99% { background-color: #000; }
+    100% { background-color: #fff; }
+  }
+  body {
+  -webkit-animation: argh-my-eyes 0.9s infinite;
+  -moz-animation:    argh-my-eyes 0.9s infinite;
+  animation:         argh-my-eyes 0.9s infinite;
+}
+</style> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<!-- Odometer CSS -->
+	<link rel="stylesheet" href="http://github.hubspot.com/odometer/themes/odometer-theme-default.css" />
+
+	<!-- Font Awesome CSS -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+	<!-- Google Fonts CSS -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Inconsolata|Droid+Sans" rel="stylesheet">
+
+	<!-- Load config -->
+	<script src="config.js"></script>
+
+<style>
+
+body {
+  background-color: #c91267;
+}
+
+	.col-md-7 {
+		padding-left: 0;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+				background-color: white;
+				text-align: left;
+
+	}
+
+	.channelName{
+		overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+
+	}
+
+	.row {
+
+		padding-top: 0.5px;
+		padding-right: 1.3px;
+		padding-bottom: 0.8px;
+		padding-left: 1.3px;
+		font-size: 30px !important;
+	}
+
+	img {
+		width: 100px;
+	}
+
+	.black-border-full {
+		border: 1px solid #c91267 !important
+	}
+
+	.col-md-3 {
+		padding-right: 16px !important
+	}
+	.col-md-5{
+			background-color: white;
+	}
+	.channelName{
+		font-size: 30px;
+
+	}
+	.subscriberCount{
+		font-size: 40px;
+		font-weight: bold;
+	}
+
+@keyframes blinking {
+        50%{
+          background-color: #f4c542;
+        }
+
+      }
+
+
+.startCounter
+{
+	background-color: white;
+    animation: blinking 2s infinite;
+
+}
+
+/*
+.bcontent {
+  width: 100%;
+  overflow: hidden;
+}
+.bcontent > div {
+  position: relative;
+  display: inline-block;
+  height: 200px;
+  width: 100px;
+  left: 110%;
+  border: 1px solid black;
+}*/
+
+/*ctrl + /*/
+
+</style>
+<body>
+<div class="container-fluid">
+	<div class="row" style="font-size: 25px;color: black; ">
+		<!-- <div class="bcontent"> -->
+			<div class="col-md-3">
+				<div class="row black-border-full">
+					<div class="col-md-5 startCounter">
+						<div class="channelImg_1">
+						01 <img class='channelImage' src="https://yt3.ggpht.com/a-/AAuE7mCi0YQRuAZ5lknRtxkTpxzU8LZi-Fqlt7exPA=s88-mo-c-c0xffffffff-rj-k-no"/>
+						</div>
+					</div>
+					<div class="col-md-7 startCounter">
+						<div class="channelName_1">
+							<h5 class="channelName">xloss</h5>
+						</div>
+						<div class="subCount_1">
+							<h3 class="subscriberCount card-title text-center odometer">000000000</h3>    						
+						</div>
+					</div>
+				</div>
+			</div>
+		<!-- </div> -->
+		<div class="col-md-3 slide-right">
+			<div class="row black-border-full">
+				<div class="col-md-5">
+					<div class="channelImg_2">
+					02 <img class='channelImage' src="https://yt3.ggpht.com/a-/AAuE7mCi0YQRuAZ5lknRtxkTpxzU8LZi-Fqlt7exPA=s88-mo-c-c0xffffffff-rj-k-no"/>
+				</div>
+				</div>
+				<div class="col-md-7">
+					<div class="channelName_2">
+				<h5 class="channelName">xloss</h5>
+			</div>
+			<div class="subCount_2">
+					<h3 class="subscriberCount card-title text-center odometer">000000000</h3>    						
+				</div>
+			</div>
+			</div>
+		</div>
+
+		<div class="col-md-3">
+			<div class="row black-border-full">
+				<div class="col-md-5">
+					<div class="channelImg_3">
+					03 <img class='channelImage' src="https://yt3.ggpht.com/a-/AAuE7mCi0YQRuAZ5lknRtxkTpxzU8LZi-Fqlt7exPA=s88-mo-c-c0xffffffff-rj-k-no"/>
+				</div>
+				</div>
+				<div class="col-md-7">
+					<div class="channelName_3">
+				<h5 class="channelName">xloss</h5>
+			</div>
+			<div class="subCount_3">
+					<h3 class="subscriberCount card-title text-center odometer">000000000</h3>    						
+				</div>
+			</div>
+			</div>
+		</div>
+				<div class="col-md-3">
+			<div class="row black-border-full">
+				<div class="col-md-5">
+					<div class="channelImg_4">
+					04 <img class='channelImage' src="https://yt3.ggpht.com/a-/AAuE7mCi0YQRuAZ5lknRtxkTpxzU8LZi-Fqlt7exPA=s88-mo-c-c0xffffffff-rj-k-no"/>
+				</div>
+				</div>
+				<div class="col-md-7">
+					<div class="channelName_4">
+				<h5 class="channelName">xloss</h5>
+			</div>
+			<div class="subCount_4">
+					<h3 class="subscriberCount card-title text-center odometer">000000000</h3>    						
+				</div>
+			</div>
+			</div>
+		</div>
+</div>
+		
+	<div class="row" style="font-size: 25px;color: black; ">
+		<div class="col-md-3">
+			<div class="row black-border-full">
+				<div class="col-md-5">
+					<div class="channelImg_5">
+					05 <img class='channelImage' src="https://yt3.ggpht.com/a-/AAuE7mCi0YQRuAZ5lknRtxkTpxzU8LZi-Fqlt7exPA=s88-mo-c-c0xffffffff-rj-k-no"/>
+				</div>
+				</div>
+				<div class="col-md-7">
+					<div class="channelName_5">
+				<h5 class="channelName">xloss</h5>
+			</div>
+			<div class="subCount_5">
+					<h3 class="subscriberCount card-title text-center odometer">000000000</h3>    						
+				</div>
+			</div>
+			</div>
+		</div>
+
+		<div class="col-md-3">
+			<div class="row black-border-full">
+				<div class="col-md-5">
+					<div class="channelImg_6">
+					06 <img class='channelImage' src="https://yt3.ggpht.com/a-/AAuE7mCi0YQRuAZ5lknRtxkTpxzU8LZi-Fqlt7exPA=s88-mo-c-c0xffffffff-rj-k-no"/>
+				</div>
+				</div>
+				<div class="col-md-7">
+					<div class="channelName_6">
+				<h5 class="channelName">xloss</h5>
+			</div>
+			<div class="subCount_6">
+					<h3 class="subscriberCount card-title text-center odometer">000000000</h3>    						
+				</div>
+			</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="row black-border-full">
+				<div class="col-md-5">
+					<div class="channelImg_7">
+					07 <img class='channelImage' src="https://yt3.ggpht.com/a-/AAuE7mCi0YQRuAZ5lknRtxkTpxzU8LZi-Fqlt7exPA=s88-mo-c-c0xffffffff-rj-k-no"/>
+				</div>
+				</div>
+				<div class="col-md-7">
+					<div class="channelName_7">
+				<h5 class="channelName">xloss</h5>
+			</div>
+			<div class="subCount_7">
+					<h3 class="subscriberCount card-title text-center odometer">000000000</h3>    						
+				</div>
+			</div>
+			</div>
+		</div>
+
+		<div class="col-md-3">
+			<div class="row black-border-full">
+				<div class="col-md-5">
+					<div class="channelImg_8">
+					08 <img class='channelImage' src="https://yt3.ggpht.com/a-/AAuE7mCi0YQRuAZ5lknRtxkTpxzU8LZi-Fqlt7exPA=s88-mo-c-c0xffffffff-rj-k-no"/>
+				</div>
+				</div>
+				<div class="col-md-7">
+					<div class="channelName_8">
+				<h5 class="channelName">xloss</h5>
+			</div>
+			<div class="subCount_8">
+					<h3 class="subscriberCount card-title text-center odometer">000000000</h3>    						
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+		<div class="row" style="font-size: 25px;color: black; ">
+				<div class="col-md-3">
+			<div class="row black-border-full">
+				<div class="col-md-5">
+					<div class="channelImg_9">
+					09 <img class='channelImage' src="https://yt3.ggpht.com/a-/AAuE7mCi0YQRuAZ5lknRtxkTpxzU8LZi-Fqlt7exPA=s88-mo-c-c0xffffffff-rj-k-no"/>
+				</div>
+				</div>
+				<div class="col-md-7">
+					<div class="channelName_9">
+				<h5 class="channelName">xloss</h5>
+			</div>
+			<div class="subCount_9">
+					<h3 class="subscriberCount card-title text-center odometer">000000000</h3>    						
+				</div>
+			</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="row black-border-full">
+				<div class="col-md-5">
+					<div class="channelImg_10">
+					10 <img class='channelImage' src="https://yt3.ggpht.com/a-/AAuE7mCi0YQRuAZ5lknRtxkTpxzU8LZi-Fqlt7exPA=s88-mo-c-c0xffffffff-rj-k-no"/>
+				</div>
+				</div>
+				<div class="col-md-7">
+					<div class="channelName_10">
+				<h5 class="channelName">xloss</h5>
+			</div>
+			<div class="subCount_10">
+					<h3 class="subscriberCount card-title text-center odometer">000000000</h3>    						
+				</div>
+			</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="row black-border-full">
+				<div class="col-md-5">
+					<div class="channelImg_11">
+					11 <img class='channelImage' src="https://yt3.ggpht.com/a-/AAuE7mCi0YQRuAZ5lknRtxkTpxzU8LZi-Fqlt7exPA=s88-mo-c-c0xffffffff-rj-k-no"/>
+				</div>
+				</div>
+				<div class="col-md-7">
+					<div class="channelName_11">
+				<h5 class="channelName">xloss</h5>
+			</div>
+			<div class="subCount_11">
+					<h3 class="subscriberCount card-title text-center odometer">000000000</h3>    						
+				</div>
+			</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="row black-border-full">
+				<div class="col-md-5">
+					<div class="channelImg_12">
+					12 <img class='channelImage' src="https://yt3.ggpht.com/a-/AAuE7mCi0YQRuAZ5lknRtxkTpxzU8LZi-Fqlt7exPA=s88-mo-c-c0xffffffff-rj-k-no"/>
+				</div>
+				</div>
+				<div class="col-md-7">
+					<div class="channelName_12">
+				<h5 class="channelName">xloss</h5>
+			</div>
+			<div class="subCount_12">
+					<h3 class="subscriberCount card-title text-center odometer">000000000</h3>    						
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+	<div class="row" style="font-size: 25px;color: black; ">
+
+		<div class="col-md-3">
+			<div class="row black-border-full">
+				<div class="col-md-5">
+					<div class="channelImg_13">
+					13 <img class='channelImage' src="https://yt3.ggpht.com/a-/AAuE7mCi0YQRuAZ5lknRtxkTpxzU8LZi-Fqlt7exPA=s88-mo-c-c0xffffffff-rj-k-no"/>
+				</div>
+				</div>
+				<div class="col-md-7">
+					<div class="channelName_13">
+				<h5 class="channelName">xloss</h5>
+			</div>
+			<div class="subCount_13">
+					<h3 class="subscriberCount card-title text-center odometer">000000000</h3>    						
+				</div>
+			</div>
+			</div>
+		</div>
+				<div class="col-md-3">
+			<div class="row black-border-full">
+				<div class="col-md-5">
+					<div class="channelImg_14">
+					14 <img class='channelImage' src="https://yt3.ggpht.com/a-/AAuE7mCi0YQRuAZ5lknRtxkTpxzU8LZi-Fqlt7exPA=s88-mo-c-c0xffffffff-rj-k-no"/>
+				</div>
+				</div>
+				<div class="col-md-7">
+					<div class="channelName_14">
+				<h5 class="channelName">xloss</h5>
+			</div>
+			<div class="subCount_14">
+					<h3 class="subscriberCount card-title text-center odometer">000000000</h3>    						
+				</div>
+			</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="row black-border-full">
+				<div class="col-md-5">
+					<div class="channelImg_15">
+					15 <img class='channelImage' src="https://yt3.ggpht.com/a-/AAuE7mCi0YQRuAZ5lknRtxkTpxzU8LZi-Fqlt7exPA=s88-mo-c-c0xffffffff-rj-k-no"/>
+				</div>
+				</div>
+				<div class="col-md-7">
+					<div class="channelName_15">
+				<h5 class="channelName">xloss</h5>
+			</div>
+			<div class="subCount_15">
+					<h3 class="subscriberCount card-title text-center odometer">000000000</h3>    						
+				</div>
+			</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="row black-border-full">
+				<div class="col-md-5">
+					<div class="channelImg_16">
+					16 <img class='channelImage' src="https://yt3.ggpht.com/a-/AAuE7mCi0YQRuAZ5lknRtxkTpxzU8LZi-Fqlt7exPA=s88-mo-c-c0xffffffff-rj-k-no"/>
+				</div>
+				</div>
+				<div class="col-md-7">
+					<div class="channelName_16">
+				<h5 class="channelName">xloss</h5>
+			</div>
+			<div class="subCount_16">
+					<h3 class="subscriberCount card-title text-center odometer">000000000</h3>    						
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+	<div class="row" style="font-size: 25px;color: black; ">
+		<div class="col-md-3">
+			<div class="row black-border-full">
+				<div class="col-md-5">
+					<div class="channelImg_17">
+					17 <img class='channelImage' src="https://yt3.ggpht.com/a-/AAuE7mCi0YQRuAZ5lknRtxkTpxzU8LZi-Fqlt7exPA=s88-mo-c-c0xffffffff-rj-k-no"/>
+				</div>
+				</div>
+				<div class="col-md-7">
+					<div class="channelName_17">
+				<h5 class="channelName">xloss</h5>
+			</div>
+			<div class="subCount_17">
+					<h3 class="subscriberCount card-title text-center odometer">000000000</h3>    						
+				</div>
+			</div>
+			</div>
+		</div>
+
+		<div class="col-md-3">
+			<div class="row black-border-full">
+				<div class="col-md-5">
+					<div class="channelImg_18">
+					18 <img class='channelImage' src="https://yt3.ggpht.com/a-/AAuE7mCi0YQRuAZ5lknRtxkTpxzU8LZi-Fqlt7exPA=s88-mo-c-c0xffffffff-rj-k-no"/>
+				</div>
+				</div>
+				<div class="col-md-7">
+					<div class="channelName_18">
+				<h5 class="channelName">xloss</h5>
+			</div>
+			<div class="subCount_18">
+					<h3 class="subscriberCount card-title text-center odometer">000000000</h3>    						
+				</div>
+			</div>
+			</div>
+		</div>
+				<div class="col-md-3">
+			<div class="row black-border-full">
+				<div class="col-md-5">
+					<div class="channelImg_19">
+					19 <img class='channelImage' src="https://yt3.ggpht.com/a-/AAuE7mCi0YQRuAZ5lknRtxkTpxzU8LZi-Fqlt7exPA=s88-mo-c-c0xffffffff-rj-k-no"/>
+				</div>
+				</div>
+				<div class="col-md-7">
+					<div class="channelName_19">
+				<h5 class="channelName">xloss</h5>
+			</div>
+			<div class="subCount_19">
+					<h3 class="subscriberCount card-title text-center odometer">000000000</h3>    						
+				</div>
+			</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="row black-border-full">
+				<div class="col-md-5">
+					<div class="channelImg_20">
+					20 <img class='channelImage' src="https://yt3.ggpht.com/a-/AAuE7mCi0YQRuAZ5lknRtxkTpxzU8LZi-Fqlt7exPA=s88-mo-c-c0xffffffff-rj-k-no"/>
+				</div>
+				</div>
+				<div class="col-md-7">
+					<div class="channelName_20">
+				<h5 class="channelName">xloss</h5>
+			</div>
+			<div class="subCount_20">
+					<h3 class="subscriberCount card-title text-center odometer">000000000</h3>  
+				</div>
+			</div>
+			</div>
+		</div>
+
+	</div>
+	<div class="row" style="font-size: 25px;color: black; ">
+		<div class="col-md-3">
+			<div class="row black-border-full">
+				<div class="col-md-5">
+					<div class="channelImg_11">
+					21 <img class='channelImage' src="https://yt3.ggpht.com/a-/AAuE7mCi0YQRuAZ5lknRtxkTpxzU8LZi-Fqlt7exPA=s88-mo-c-c0xffffffff-rj-k-no"/>
+				</div>
+				</div>
+				<div class="col-md-7">
+					<div class="channelName_21">
+				<h5 class="channelName">xloss</h5>
+			</div>
+			<div class="subCount_21">
+					<h3 class="subscriberCount card-title text-center odometer">000000000</h3>    						
+				</div>
+			</div>
+			</div>
+		</div>
+
+		<div class="col-md-3">
+			<div class="row black-border-full">
+				<div class="col-md-5">
+					<div class="channelImg_22">
+					22 <img class='channelImage' src="https://yt3.ggpht.com/a-/AAuE7mCi0YQRuAZ5lknRtxkTpxzU8LZi-Fqlt7exPA=s88-mo-c-c0xffffffff-rj-k-no"/>
+				</div>
+				</div>
+				<div class="col-md-7">
+					<div class="channelName_22">
+				<h5 class="channelName">xloss</h5>
+			</div>
+			<div class="subCount_22">
+					<h3 class="subscriberCount card-title text-center odometer">000000000</h3>    						
+				</div>
+			</div>
+			</div>
+		</div>
+				<div class="col-md-3">
+			<div class="row black-border-full">
+				<div class="col-md-5">
+					<div class="channelImg_23">
+					23 <img class='channelImage' src="https://yt3.ggpht.com/a-/AAuE7mCi0YQRuAZ5lknRtxkTpxzU8LZi-Fqlt7exPA=s88-mo-c-c0xffffffff-rj-k-no"/>
+				</div>
+				</div>
+				<div class="col-md-7">
+					<div class="channelName_23">
+				<h5 class="channelName">xloss</h5>
+			</div>
+			<div class="subCount_23">
+					<h3 class="subscriberCount card-title text-center odometer">000000000</h3>    						
+				</div>
+			</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="row black-border-full">
+				<div class="col-md-5">
+					<div class="channelImg_24">
+					24 <img class='channelImage' src="https://yt3.ggpht.com/a-/AAuE7mCi0YQRuAZ5lknRtxkTpxzU8LZi-Fqlt7exPA=s88-mo-c-c0xffffffff-rj-k-no"/>
+				</div>
+				</div>
+				<div class="col-md-7">
+					<div class="channelName_24">
+				<h5 class="channelName">xloss</h5>
+			</div>
+			<div class="subCount_24">
+					<h3 class="subscriberCount card-title text-center odometer">000000000</h3>  
+				</div>
+			</div>
+			</div>
+		</div>
+
+	</div>
+	<div class="row" style="font-size: 25px;color: black; ">
+		<div class="col-md-3">
+			<div class="row black-border-full">
+				<div class="col-md-5">
+					<div class="channelImg_25">
+					25 <img class='channelImage' src="https://yt3.ggpht.com/a-/AAuE7mCi0YQRuAZ5lknRtxkTpxzU8LZi-Fqlt7exPA=s88-mo-c-c0xffffffff-rj-k-no"/>
+				</div>
+				</div>
+				<div class="col-md-7">
+					<div class="channelName_25">
+				<h5 class="channelName">xloss</h5>
+			</div>
+			<div class="subCount_25">
+					<h3 class="subscriberCount card-title text-center odometer">000000000</h3>    						
+				</div>
+			</div>
+			</div>
+		</div>
+
+		<div class="col-md-3">
+			<div class="row black-border-full">
+				<div class="col-md-5">
+					<div class="channelImg_26">
+					26 <img class='channelImage' src="https://yt3.ggpht.com/a-/AAuE7mCi0YQRuAZ5lknRtxkTpxzU8LZi-Fqlt7exPA=s88-mo-c-c0xffffffff-rj-k-no"/>
+				</div>
+				</div>
+				<div class="col-md-7">
+					<div class="channelName_26">
+				<h5 class="channelName">xloss</h5>
+			</div>
+			<div class="subCount_26">
+					<h3 class="subscriberCount card-title text-center odometer">000000000</h3>    						
+				</div>
+			</div>
+			</div>
+		</div>
+				<div class="col-md-3">
+			<div class="row black-border-full">
+				<div class="col-md-5">
+					<div class="channelImg_27">
+					27 <img class='channelImage' src="https://yt3.ggpht.com/a-/AAuE7mCi0YQRuAZ5lknRtxkTpxzU8LZi-Fqlt7exPA=s88-mo-c-c0xffffffff-rj-k-no"/>
+				</div>
+				</div>
+				<div class="col-md-7">
+					<div class="channelName_27">
+				<h5 class="channelName">xloss</h5>
+			</div>
+			<div class="subCount_27">
+					<h3 class="subscriberCount card-title text-center odometer">000000000</h3>    						
+				</div>
+			</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="row black-border-full">
+				<div class="col-md-5">
+					<div class="channelImg_28">
+					28 <img class='channelImage' src="https://yt3.ggpht.com/a-/AAuE7mCi0YQRuAZ5lknRtxkTpxzU8LZi-Fqlt7exPA=s88-mo-c-c0xffffffff-rj-k-no"/>
+				</div>
+				</div>
+				<div class="col-md-7">
+					<div class="channelName_28">
+				<h5 class="channelName">xloss</h5>
+			</div>
+			<div class="subCount_28">
+					<h3 class="subscriberCount card-title text-center odometer">000000000</h3>  
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+		<div class="row" style="font-size: 25px;color: black; ">
+		<div class="col-md-3">
+			<div class="row black-border-full">
+				<div class="col-md-5">
+					<div class="channelImg_29">
+					29 <img class='channelImage' src="https://yt3.ggpht.com/a-/AAuE7mCi0YQRuAZ5lknRtxkTpxzU8LZi-Fqlt7exPA=s88-mo-c-c0xffffffff-rj-k-no"/>
+				</div>
+				</div>
+				<div class="col-md-7">
+					<div class="channelName_29">
+				<h5 class="channelName">xloss</h5>
+			</div>
+			<div class="subCount_29">
+					<h3 class="subscriberCount card-title text-center odometer">000000000</h3>    						
+				</div>
+			</div>
+			</div>
+		</div>
+
+		<div class="col-md-3">
+			<div class="row black-border-full">
+				<div class="col-md-5">
+					<div class="channelImg_30">
+					30 <img class='channelImage' src="https://yt3.ggpht.com/a-/AAuE7mCi0YQRuAZ5lknRtxkTpxzU8LZi-Fqlt7exPA=s88-mo-c-c0xffffffff-rj-k-no"/>
+				</div>
+				</div>
+				<div class="col-md-7">
+					<div class="channelName_30">
+				<h5 class="channelName">xloss</h5>
+			</div>
+			<div class="subCount_30">
+					<h3 class="subscriberCount card-title text-center odometer">000000000</h3>    						
+				</div>
+			</div>
+			</div>
+		</div>
+				<div class="col-md-3">
+			<div class="row black-border-full">
+				<div class="col-md-5">
+					<div class="channelImg_31">
+					31 <img class='channelImage' src="https://yt3.ggpht.com/a-/AAuE7mCi0YQRuAZ5lknRtxkTpxzU8LZi-Fqlt7exPA=s88-mo-c-c0xffffffff-rj-k-no"/>
+				</div>
+				</div>
+				<div class="col-md-7">
+					<div class="channelName_31">
+				<h5 class="channelName">xloss</h5>
+			</div>
+			<div class="subCount_31">
+					<h3 class="subscriberCount card-title text-center odometer">000000000</h3>    						
+				</div>
+			</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="row black-border-full">
+				<div class="col-md-5">
+					<div class="channelImg_32">
+					32 <img class='channelImage' src="https://yt3.ggpht.com/a-/AAuE7mCi0YQRuAZ5lknRtxkTpxzU8LZi-Fqlt7exPA=s88-mo-c-c0xffffffff-rj-k-no"/>
+				</div>
+				</div>
+				<div class="col-md-7">
+					<div class="channelName_32">
+				<h5 class="channelName">xloss</h5>
+			</div>
+			<div class="subCount_32">
+					<h3 class="subscriberCount card-title text-center odometer">000000000</h3>  
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+		<div class="row" style="font-size: 25px;color: black; ">
+		<div class="col-md-3">
+			<div class="row black-border-full">
+				<div class="col-md-5">
+					<div class="channelImg_33">
+					33 <img class='channelImage' src="https://yt3.ggpht.com/a-/AAuE7mCi0YQRuAZ5lknRtxkTpxzU8LZi-Fqlt7exPA=s88-mo-c-c0xffffffff-rj-k-no"/>
+				</div>
+				</div>
+				<div class="col-md-7">
+					<div class="channelName_33">
+				<h5 class="channelName">xloss</h5>
+			</div>
+			<div class="subCount_33">
+					<h3 class="subscriberCount card-title text-center odometer">000000000</h3>    						
+				</div>
+			</div>
+			</div>
+		</div>
+
+		<div class="col-md-3">
+			<div class="row black-border-full">
+				<div class="col-md-5">
+					<div class="channelImg_34">
+					34 <img class='channelImage' src="https://yt3.ggpht.com/a-/AAuE7mCi0YQRuAZ5lknRtxkTpxzU8LZi-Fqlt7exPA=s88-mo-c-c0xffffffff-rj-k-no"/>
+				</div>
+				</div>
+				<div class="col-md-7">
+					<div class="channelName_34">
+				<h5 class="channelName">xloss</h5>
+			</div>
+			<div class="subCount_34">
+					<h3 class="subscriberCount card-title text-center odometer">000000000</h3>    						
+				</div>
+			</div>
+			</div>
+		</div>
+				<div class="col-md-3">
+			<div class="row black-border-full">
+				<div class="col-md-5">
+					<div class="channelImg_35">
+					35 <img class='channelImage' src="https://yt3.ggpht.com/a-/AAuE7mCi0YQRuAZ5lknRtxkTpxzU8LZi-Fqlt7exPA=s88-mo-c-c0xffffffff-rj-k-no"/>
+				</div>
+				</div>
+				<div class="col-md-7">
+					<div class="channelName_35">
+				<h5 class="channelName">xloss</h5>
+			</div>
+			<div class="subCount_35">
+					<h3 class="subscriberCount card-title text-center odometer">000000000</h3>    						
+				</div>
+			</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="row black-border-full">
+				<div class="col-md-5">
+					<div class="channelImg_36">
+					36 <img class='channelImage' src="https://yt3.ggpht.com/a-/AAuE7mCi0YQRuAZ5lknRtxkTpxzU8LZi-Fqlt7exPA=s88-mo-c-c0xffffffff-rj-k-no"/>
+				</div>
+				</div>
+				<div class="col-md-7">
+					<div class="channelName_36">
+				<h5 class="channelName">xloss</h5>
+			</div>
+			<div class="subCount_36">
+					<h3 class="subscriberCount card-title text-center odometer">000000000</h3>  
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+
+<!-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="1.jpg" alt="First slide" style="height: 100px; width: 100px">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="1.jpg" alt="Second slide" style="height: 150px; width: 150px">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="1.jpg" alt="Third slide" style="height: 190px; width: 190px">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div> -->
+
+
+<!-- 
+<div class="bcontent">
+  <div id="slider_1"><img class="d-block w-100" src="1.jpg" alt="Third slide" style="height: 190px; width: 190px"></div>
+</div>
+ -->
+
+<router-outlet></router-outlet>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<!-- <script src="http://github.hubspot.com/odometer/odometer.js"></script> -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+	<script src="odometer-master/odometer.js"></script>
+
+
+	<script>
+
+		$( document ).ready(function() {
+
+
+			// $("#slider_1").animate({
+			//     left: "5"
+		 //  	}, {
+		 //    	duration: 1000
+		 //  	});
+    		// $('#carouselExampleControls').carousel();
+
+   //  		setTimeout(function(){
+   //  			$('#slider_1').show('slide', { direction: 'left' }, 1000);
+			// }, 3000)
+		});
+		
+		var corsAnywhereClient = "https://cors-anywhere.herokuapp.com/";
+		//var corsAnywhereClient = "https://afternoon-bayou-46027.herokuapp.com/";
+		var channelListURL =  corsAnywhereClient + "https://twitch.center/customapi/quote/list?token=" + CONFIG.nightbotToken + "&no_id=1";
+
+		function fn60sec() {
+		var googleApiCallURL="";
+		var channelList = [];
+		var channelListDedup = [];
+		var channelListSelected = "";
+		var channelID = ""; //UCL3SkASCKgaXwIin7kwy6zA
+		var channelName = [];
+		var channelImage = [];
+		var subscriberCount = [];
+
+		var ytJSON = [];
+
+		$.get(channelListURL, function(result){
+			console.log(result);
+			channelList = result.split("\n").reverse();
+			channelListDedup = Array.from(new Set(channelList));
+			channelListSelected = channelListDedup.slice(0,Math.min(36,channelListDedup.length)).join("%2C");
+
+				//googleApiCallURL="https://www.googleapis.com/youtube/v3/channels?part=statistics&id=" + channelListSelected + "&fields=items/statistics/subscriberCount&key=" + CONFIG.googleApiKeys[Math.floor(Math.random() * Math.floor(CONFIG.googleApiKeys.length))];
+				//$.getJSON(googleApiCallURL, function(result){
+
+									googleApiCallURL="https://www.googleapis.com/youtube/v3/channels?part=snippet%2Cstatistics&id=" + channelListSelected + "&key=" + CONFIG.googleApiKeys[Math.floor(Math.random() * Math.floor(CONFIG.googleApiKeys.length))];
+				$.getJSON(googleApiCallURL, function(result){
+
+					console.log(result);
+					ytJSON = result;
+		  			var iteration = 0;
+		  	   		while (iteration <= Math.min(35,result.items.length-1)) {
+   	   					var channelNumber = channelListDedup.indexOf(result.items[iteration].id) + 1;
+						channelName[iteration] = result.items[iteration].snippet.title;
+						subscriberCount[iteration] = result.items[iteration].statistics.subscriberCount;
+						channelImage[iteration] = result.items[iteration].snippet.thumbnails.medium.url;
+
+						$(".channelName_" + channelNumber + " .channelName").html(channelName[iteration]);
+						// console.log(".channelName_" + channelNumber + " .channelName");
+
+						$('.subCount_' + channelNumber + ' .subscriberCount').html(subscriberCount[iteration]);
+						$('.channelImg_'+ channelNumber + ' .channelImage').attr('src',channelImage[iteration]);
+
+						iteration++;
+					};
+					
+				});
+
+		});
+
+		};
+		fn60sec();
+		setInterval(fn60sec, 1*1*500);
+
+		/* To set up your own cors anywhere server set up a heroku account and commit the following code to it
+		git clone https://github.com/Rob--W/cors-anywhere.git
+		cd cors-anywhere/
+		npm install
+		heroku create
+		git push heroku master*/
+
+	</script>
+</body>
+</html>
